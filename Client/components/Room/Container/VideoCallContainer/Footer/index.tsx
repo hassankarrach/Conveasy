@@ -16,7 +16,7 @@ import NoteAltIcon from "@mui/icons-material/NoteAlt";
 import CallEndIcon from "@mui/icons-material/CallEnd";
 import GroupsIcon from "@mui/icons-material/Groups";
 
-const index = () => {
+const Index = () => {
   //SocetContext
   const {
     socket,
@@ -151,4 +151,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

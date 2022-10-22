@@ -6,7 +6,7 @@ import { Video } from "./Video.Styled";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import PersonIcon from "@mui/icons-material/Person";
 
-function index() {
+function Index() {
   //SocetContext
   const { users, name } = UseSockets();
 
@@ -29,9 +29,9 @@ function index() {
         </div>
       </div>
       <div className="UserVideos">
-        {users.map((user) => {
+        {users.map((user, key) => {
           return (
-            <div className="UserVideo">
+            <div className="UserVideo" key={key}>
               <div
                 className="Bg"
                 style={{
@@ -56,4 +56,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

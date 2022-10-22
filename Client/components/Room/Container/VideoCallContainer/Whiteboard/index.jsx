@@ -4,7 +4,7 @@ import { StyledWhiteBoard } from "./WhiteBoard.styled";
 import LayersClearIcon from "@mui/icons-material/LayersClear";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
-function index() {
+function Index() {
   // CanvasRef
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
@@ -111,4 +111,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
