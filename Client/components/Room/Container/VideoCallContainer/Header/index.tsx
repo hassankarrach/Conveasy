@@ -55,9 +55,10 @@ function index() {
 
       <JoinedPeople>
         <AvatarGroup max={4} className={"AvatarGroup"}>
-          {users.map((user) => {
+          {users.map((user, key) => {
             return (
               <Avatar
+                key={key}
                 alt={user.name}
                 src={`./Assets/Faces/${user.avatar}.png`}
               />

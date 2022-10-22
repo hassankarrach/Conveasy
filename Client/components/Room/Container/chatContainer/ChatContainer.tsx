@@ -108,9 +108,9 @@ const ChatContainer = () => {
 
           {ParticipantsShow && (
             <Participants>
-              {users.map((user) => {
+              {users.map((user, key) => {
                 return (
-                  <div className="Participant">
+                  <div className="Participant" key={key}>
                     <div
                       className="Avatar"
                       style={{
