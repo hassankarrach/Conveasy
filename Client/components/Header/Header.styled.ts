@@ -270,6 +270,7 @@ export const StyledModal = styled.div`
     border-radius: 4px;
     margin-top: auto;
     font-size: 1rem;
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {

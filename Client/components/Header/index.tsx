@@ -46,18 +46,22 @@ function Index() {
 
   const HandleJoinRoom = (e: any) => {
     if (name !== "" && room !== "" && checkedRadio !== "") {
-      socket.emit(
-        "join",
-        { name, room, gender: checkedRadio },
-        (error: any) => {
-          if (error) {
-            alert(error);
-          } else {
-            e.preventDefault();
-            router.push("/room");
+      try {
+        socket.emit(
+          "join",
+          { name, room, gender: checkedRadio },
+          (error: any) => {
+            if (error) {
+              alert(error);
+            } else {
+              e.preventDefault();
+              router.push("/room");
+            }
           }
-        }
-      );
+        );
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       setError("please fill all required fields.");
     }
