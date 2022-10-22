@@ -19,7 +19,7 @@ exports.modules = {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"SOCKET_URL\": () => (/* binding */ SOCKET_URL)\n/* harmony export */ });\nconst SOCKET_URL = \"https://conveasy.vercel.app/\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb25maWcvZGVmYXVsdC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQU8sTUFBTUEsVUFBVSxHQUFHLDhCQUFuQiIsInNvdXJjZXMiOlsid2VicGFjazovL215LWFwcC8uL2NvbmZpZy9kZWZhdWx0LnRzPzVjMTQiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IFNPQ0tFVF9VUkwgPSBcImh0dHBzOi8vY29udmVhc3kudmVyY2VsLmFwcC9cIjtcclxuIl0sIm5hbWVzIjpbIlNPQ0tFVF9VUkwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./config/default.ts\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"SOCKET_URL\": () => (/* binding */ SOCKET_URL)\n/* harmony export */ });\nconst SOCKET_URL = \"ws://conveasy.vercel.app/\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb25maWcvZGVmYXVsdC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQU8sTUFBTUEsVUFBVSxHQUFHLDJCQUFuQiIsInNvdXJjZXMiOlsid2VicGFjazovL215LWFwcC8uL2NvbmZpZy9kZWZhdWx0LnRzPzVjMTQiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IFNPQ0tFVF9VUkwgPSBcIndzOi8vY29udmVhc3kudmVyY2VsLmFwcC9cIjtcclxuIl0sIm5hbWVzIjpbIlNPQ0tFVF9VUkwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./config/default.ts\n");
 
 /***/ }),
 
