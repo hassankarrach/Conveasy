@@ -11,6 +11,10 @@ const {
   getUsersInRoom,
 } = require("./utils/users");
 
+app.get("/", (req, res) => {
+  res.json({ text: "server is Runing." });
+});
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
