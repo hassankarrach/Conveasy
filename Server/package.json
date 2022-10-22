@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "start":"nodemon index.js"
+    "start":"node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
