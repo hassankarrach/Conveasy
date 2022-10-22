@@ -1,0 +1,29 @@
+version : "3.8"
+
+services:
+    server:
+     container_name : conveasy_server
+     restart : unless-stopped
+     image: conveasy-server-prd:1.0.0
+     build:
+       context: Client
+       target: production
+       dockerfile: Dockerfile
+     ports:
+       - 3000:3000
+     networks:
+       - shared-network
+
+    client:
+     container_name : conveasy_server
+     restart : unless-stopped
+     image: conveasy-client-prd:1.0.0
+     build:
+       context: Client
+       target: production
+       dockerfile: Dockerfile
+     ports:
+       - 8000:8001
+     networks:
+       - shared-network
+

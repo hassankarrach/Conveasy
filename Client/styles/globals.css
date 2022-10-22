@@ -1,0 +1,113 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+@font-face {
+  font-family: 'Lemon/Milk';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lemon/Milk'), url('https://fonts.cdnfonts.com/s/14917/LemonMilk.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lemon/Milk';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lemon/Milk'), url('https://fonts.cdnfonts.com/s/14917/LemonMilkitalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lemon/Milk';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lemon/Milk'), url('https://fonts.cdnfonts.com/s/14917/LemonMilklightitalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lemon/Milk';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lemon/Milk'), url('https://fonts.cdnfonts.com/s/14917/LemonMilkbold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lemon/Milk';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lemon/Milk'), url('https://fonts.cdnfonts.com/s/14917/LemonMilkbolditalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lemon/Milk light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lemon/Milk light'), url('https://fonts.cdnfonts.com/s/14917/LemonMilklight.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("/Media/fonts/CircularStd-Book.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "D-DIN Condensed";
+  src: url("/Media/fonts/D-DINCondensed-Bold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mark Pro";
+  src: url("/Media/fonts/MarkPro-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*RE-SET*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+
+/*VARIABLS*/
+:root {
+  --MainColor :#9387c7;;
+  --black-color: #1f1c1c;
+  --ParagraphColor  :#8c939d;
+  --Bg : #10101a;
+  --White-Color : #f5f0ec;
+
+  /*FontsVars*/
+  --font-primary :'Poppins', sans-serif;
+  --font-secondary: "Mark Pro", sans-serif;
+  --font-tertiary: 'Lemon/Milk light', sans-serif;
+}
+
+
+html{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+
+p{
+  color : var(--ParagraphColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

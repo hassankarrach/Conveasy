@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+			"@styles/*": ["styles/*"],
+			"@components/*": ["components/*"],
+			"@assets/*": ["assets/*"],
+			"@libs/*": ["libs/*"],
+      "@utils/*": ["utils/*"],
+			"@locales/*": ["locales/*"]
+		},
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Room/Container/VideoCallContainer/Whiteboard/index.jsx"],
+  "exclude": [".next","node_modules"]
+}
