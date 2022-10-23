@@ -1,1 +1,1 @@
-export const SOCKET_URL = "https://conveasy.vercel.app/";
+export const SOCKET_URL = "https://conveasy.herokuapp.com/";

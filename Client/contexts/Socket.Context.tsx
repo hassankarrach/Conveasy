@@ -35,9 +35,7 @@ interface Context {
   setChatContainerShow: Function;
 }
 
-const socket = io(SOCKET_URL, {
-  transports: ["websocket", "polling", "flashsocket"],
-});
+const socket = io(SOCKET_URL, { transports: ["websocket"] });
 
 const SocketContext = createContext<Context>({
   socket,

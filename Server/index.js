@@ -3,13 +3,15 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
-app.use(cors());
+
 const {
   addUser,
   removeUser,
   getUser,
   getUsersInRoom,
 } = require("./utils/users");
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({ text: "server is Runing." });
@@ -111,4 +113,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(80, "192.168.1.130", () => console.log(`Server has started.`));
+server.listen(process.env.PORT || 3001, () =>
+  console.log(`Server has started.`)
+);
