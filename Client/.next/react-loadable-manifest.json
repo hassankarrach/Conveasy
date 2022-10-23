@@ -11,18 +11,6 @@
       "static/chunks/node_modules_next_dist_pages__error_js.js"
     ]
   },
-  "index.tsx -> @components/Header": {
-    "id": "index.tsx -> @components/Header",
-    "files": [
-      "static/chunks/components_Header_index_tsx.js"
-    ]
-  },
-  "index.tsx -> @components/Navbar": {
-    "id": "index.tsx -> @components/Navbar",
-    "files": [
-      "static/chunks/components_Navbar_index_tsx.js"
-    ]
-  },
   "room.tsx -> @components/Room/Container": {
     "id": "room.tsx -> @components/Room/Container",
     "files": [
