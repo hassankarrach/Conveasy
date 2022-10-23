@@ -19,9 +19,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://conveasy-client.vercel.app/",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
-    credentials: true,
   },
 });
 
@@ -112,6 +111,4 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 3001, () =>
-  console.log(`Server has started.`)
-);
+server.listen(80, "192.168.1.130", () => console.log(`Server has started.`));
