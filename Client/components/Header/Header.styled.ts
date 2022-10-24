@@ -29,7 +29,7 @@ export const StyledHeader = styled.div`
     position: absolute;
     width: 1642px;
     height: 686px;
-    right: -50%;
+    right: -55%;
     bottom: -70%;
     background: #9387c7;
     filter: blur(210px);
@@ -54,7 +54,7 @@ export const StyledHeader = styled.div`
     left: -70%;
     top: -90%;
     background: #0819b5;
-    filter: blur(310px);
+    filter: blur(610px);
     transform: rotate(65.64deg);
     @media (max-width: 768px) {
       left: -320%;

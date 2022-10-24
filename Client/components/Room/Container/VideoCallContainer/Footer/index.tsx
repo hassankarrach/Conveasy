@@ -70,6 +70,7 @@ const Index = () => {
   };
   const HandleDisconnect = (e: any) => {
     socket.disconnect();
+    localStorage.removeItem("UserDetail");
     router.push("/").then(() => {
       window.location.reload();
     });

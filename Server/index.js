@@ -39,6 +39,10 @@ io.on("connection", (socket) => {
 			welcome to room ${user.room}.`,
     });
 
+    socket.on("typing", (data) => {
+      socket.broadcast.to(user.room).emit("UserIsTyping", data);
+    });
+
     // Broadcast will send message to everyone
     // in the room except the joined user
     socket.broadcast

@@ -60,6 +60,9 @@ function Index() {
             if (error) {
               alert(error);
             } else {
+              let UserDetail = { name: name, room: room, gender: checkedRadio };
+              localStorage.setItem("UserDetail", JSON.stringify(UserDetail));
+
               e.preventDefault();
               router.push("/room");
             }
