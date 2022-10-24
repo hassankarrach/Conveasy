@@ -22,11 +22,5 @@
     "files": [
       "static/chunks/components_Navbar_index_tsx.js"
     ]
-  },
-  "room.tsx -> @components/Room/Container": {
-    "id": "room.tsx -> @components/Room/Container",
-    "files": [
-      "static/chunks/components_Room_Container_index_tsx.js"
-    ]
   }
 }

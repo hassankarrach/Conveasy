@@ -107,6 +107,61 @@ export const MessagesContainer = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: #e9e9e9;
   }
+
+  .TypingComp {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--font-primary);
+    color: #8d8c91;
+    padding: 10px;
+    margin-bottom: 2px;
+    .typing {
+      width: 5em;
+      height: 2em;
+      position: relative;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .typing__dot {
+      float: left;
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      background: #8d8c91;
+      border-radius: 50%;
+      opacity: 0;
+      animation: loadingFade 1s infinite;
+    }
+  }
+
+  .typing__dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .typing__dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .typing__dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes loadingFade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 `;
 export const ChatBox = styled.div`
   width: 100%;

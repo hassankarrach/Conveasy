@@ -17,8 +17,6 @@ import VideocamIcon from "@mui/icons-material/Videocam";
 import VideocamOffIcon from "@mui/icons-material/VideocamOff";
 
 const ChatContainer = () => {
-  const [ParticipantsShow, setParticipantsShow] = useState(false);
-  const [ChatBoxShow, setChatBoxShow] = useState(true);
   //SocetContext
   const {
     socket,
@@ -28,10 +26,26 @@ const ChatContainer = () => {
     users,
     setMessage,
     ChatContainerShow,
+    setMessages,
   } = UseSockets();
+
+  const [ParticipantsShow, setParticipantsShow] = useState(false);
+  const [ChatBoxShow, setChatBoxShow] = useState(true);
+  //TypingStats
+  const [focused, setFocused] = useState(false);
+  const onFocus = () => {
+    setFocused(true);
+    socket.emit("typing", { user: name, status: "typing" });
+  };
+  const onBlur = () => {
+    setFocused(false);
+    socket.emit("typing", { user: name, status: "Not typing" });
+  };
+  const [isTyping, setisTyping] = useState(false);
+
   //InputRef
   const newMessageRef = useRef<any>(null);
-  const messageEndRef = useRef<null | HTMLDivElement>(null);
+  const messageEndRef = useRef<null | HTMLDivElement>(null); //Empty Div in The End Of the Messages Container for auto scroll to last Message.
 
   //Filling The Message State
   const HandleMsgInput = (event: any) => {
@@ -57,6 +71,22 @@ const ChatContainer = () => {
       });
     }
   };
+
+  //HandleIsTyping
+  useEffect(() => {
+    socket.on("UserIsTyping", (data) => {
+      const { status } = data;
+      if (status === "typing") {
+        setisTyping(true);
+      } else if (status === "Not typing") {
+        setisTyping(false);
+      }
+    });
+
+    return () => {
+      socket.removeListener("UserIsTyping");
+    };
+  }, []);
 
   //StayInView
   useEffect(() => {
@@ -154,6 +184,18 @@ const ChatContainer = () => {
                     />
                   );
                 })}
+
+                {isTyping && (
+                  <div className="TypingComp">
+                    <div className="typing">
+                      <div className="typing__dot"></div>
+                      <div className="typing__dot"></div>
+                      <div className="typing__dot"></div>
+                    </div>
+
+                    <span>Someone is typing a message...</span>
+                  </div>
+                )}
                 <div ref={messageEndRef} />
               </MessagesContainer>
 
@@ -166,6 +208,8 @@ const ChatContainer = () => {
                   onKeyPress={(event) =>
                     event.key === "Enter" ? sendMessage(event) : null
                   }
+                  onFocus={onFocus}
+                  onBlur={onBlur}
                 />
                 <div className="Icon" onClick={sendMessage}>
                   <SendIcon />

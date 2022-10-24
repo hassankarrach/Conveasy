@@ -7,6 +7,7 @@ export interface Message {
   time: string;
   isCurrentUserTheSender?: Boolean;
   isAdmin: boolean;
+  isTyping?: boolean;
   content: string;
 }
 
@@ -17,6 +18,7 @@ const index: FunctionComponent<Message> = ({
   isCurrentUserTheSender,
   content,
   isAdmin,
+  isTyping,
 }) => {
   return (
     <StyledMessage IsUserSender={isCurrentUserTheSender}>

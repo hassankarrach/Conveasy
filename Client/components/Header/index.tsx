@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { StyledHeader, StyledCreateRoom, StyledModal } from "./Header.styled";
 import { useRouter } from "next/router";
 import styles from "@styles/Home.module.css";
@@ -24,10 +24,9 @@ function Index() {
   const [Error, setError] = useState("");
   //radioButton
   const [checkedRadio, setcheckedRadio] = useState("");
-
-  //ModalStates
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  //Refs
+  const RoomRef: any = useRef();
+  const NameRef: any = useRef();
 
   //SocetContext
   const { socket, room, setRoom, name, setName } = UseSockets();
@@ -38,6 +37,13 @@ function Index() {
   const HanddlRoomIdInput = (event: any) => {
     setRoom(event.target.value);
   };
+
+  //ModalStates
+  const handleOpen = () => {
+    setOpen(true);
+    // NameRef.current.focus();
+  };
+  const handleClose = () => setOpen(false);
 
   //RadioGRP event
   const HandleRadioChecked = (event: any) => {
@@ -100,12 +106,14 @@ function Index() {
                 className="Input"
                 placeholder={`${room ? room : "ENTER ROOM ID!"}`}
                 onChange={HanddlRoomIdInput}
+                ref={RoomRef}
               />
               <FormLabel className="Label">User Name :</FormLabel>
               <input
                 className="Input"
                 placeholder="ENTER USERNAME!"
                 onChange={HanddlUserNameInput}
+                ref={NameRef}
               />
               <FormLabel className="Label">Gender :</FormLabel>
               <RadioGroup
@@ -135,7 +143,7 @@ function Index() {
         </div>
       </div>
       <div className="Right">
-        <img className="MainHero" src={"/Assets/Hero/main.png"} />
+        <img className="MainHero" src={"/Assets/Hero/Main.png"} />
         {/* <img className="RedHat" src={"/Assets/Hero/RedHat.png"} /> */}
         <div className="Mark">
           <img
